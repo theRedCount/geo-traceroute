@@ -25,8 +25,8 @@ def run_traceroute(destination_ip):
 def extract_ips(traceroute_output):
     lines = traceroute_output.strip().split("\n")
     # Skip the first line (traceroute summary) and the first hop
-    if len(lines) > 2:
-        lines = lines[2:]
+    if len(lines) > 1:
+        lines = lines[1:]
     else:
         print("Not enough data in traceroute output.")
         return []
